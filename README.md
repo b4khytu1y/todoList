@@ -1,4 +1,12 @@
-    ##Туду-лист на JavaScript
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Туду-лист на JavaScript - Описание проекта</title>
+</head>
+<body>
+    <h1>Туду-лист на JavaScript</h1>
 
     <p>
         Это простой и интерактивный туду-лист, реализованный с использованием HTML, CSS и JavaScript. 
@@ -27,9 +35,56 @@ src
     <h2>Установка</h2>
     <ol>
         <li>Клонируйте репозиторий:
-            <pre><code>git clone https://github.com/b4khytu1y/todoList.git</code></pre>
+            <pre><code>git clone https://github.com/ваш_пользователь/ваш_репозиторий.git</code></pre>
         </li>
         <li>Откройте файл <code>index.html</code> в вашем любимом браузере.</li>
     </ol>
 
+    <h2>Использование</h2>
+    <ol>
+        <li>Введите текст новой задачи в поле ввода.</li>
+        <li>Нажмите кнопку "Добавить" или клавишу Enter, чтобы добавить задачу в список "TO DO".</li>
+        <li>Используйте радио-кнопки, чтобы отметить задачи как выполненные, и они будут перемещены в список "DONE".</li>
+        <li>Нажмите на иконку редактирования для изменения задачи или на иконку удаления, чтобы удалить её.</li>
+    </ol>
 
+    <h2>Примеры кода</h2>
+
+    <h3>Добавление новой задачи</h3>
+    <pre><code>
+addButton.addEventListener('click', () => addTodo());
+todoInput.addEventListener('keypress', (event) => {
+    if (event.key === 'Enter' && todoInput.value.trim() !== '') {
+        addTodo();
+    }
+});
+    </code></pre>
+
+    <h3>Перемещение задачи в список "DONE"</h3>
+    <pre><code>
+function markAsDone(id) {
+    const todoIndex = todos.findIndex(todo => todo.id === id);
+    if (todoIndex > -1) {
+        const [doneTodo] = todos.splice(todoIndex, 1);
+        done.push(doneTodo);
+        renderTodos();
+    }
+}
+    </code></pre>
+
+    <h2>Стилизация</h2>
+    <p>
+        Для визуального оформления интерфейса использованы стили в файле <code>style.css</code>, включая центрирование элементов, стили для кнопок и списков задач.
+    </p>
+
+    <h2>Контрибуция</h2>
+    <p>
+        Приветствуется участие всех желающих. Пожалуйста, создавайте pull requests и issues для улучшения функциональности и исправления багов.
+    </p>
+
+    <h2>Лицензия</h2>
+    <p>
+        Этот проект лицензируется под <a href="LICENSE">MIT License</a>.
+    </p>
+</body>
+</html>
