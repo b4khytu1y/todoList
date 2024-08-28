@@ -1,0 +1,45 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px 0;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 8px;
+    margin-top: 10px;
+}
+
+button {
+    padding: 10px;
+    background-color: red;
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+button:disabled {
+    background-color: grey;
+    cursor: not-allowed;
+}
+
+.done-item {
+    text-decoration: line-through;
+}
