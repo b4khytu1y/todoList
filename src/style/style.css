@@ -15,8 +15,7 @@ ul {
 
 li {
     display: flex;
-    align-items: center;
-    justify-content: space-between;
+    align-items: center; 
     padding: 8px 0;
 }
 
@@ -38,6 +37,10 @@ button {
 button:disabled {
     background-color: grey;
     cursor: not-allowed;
+}
+
+input[type="radio"] {
+    margin-right: 10px;
 }
 
 .done-item {
